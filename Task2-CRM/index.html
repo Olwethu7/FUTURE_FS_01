@@ -1,57 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Lead Management System</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Lead Management System</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Client Lead Management System</h1>
+<div class="container">
+    <h1>Client Lead Management System</h1>
 
-        <form id="leadForm">
-            <div class="form-group">
-                <label>Name</label>
-                <input type="text" id="name" required>
-            </div>
-            <div class="form-group">
-                <label>Email</label>
-                <input type="email" id="email" required>
-            </div>
-            <div class="form-group">
-                <label>Lead Source</label>
-                <input type="text" id="source">
-            </div>
-            <div class="form-group">
-                <label>Status</label>
-                <select id="status">
-                    <option value="new">New</option>
-                    <option value="contacted">Contacted</option>
-                    <option value="converted">Converted</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Notes</label>
-                <input type="text" id="notes">
-            </div>
-            <button type="submit">Add Lead</button>
-        </form>
+    <form id="leadForm">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+            <label>Lead Source</label>
+            <input type="text" id="source">
+        </div>
+        <div class="form-group">
+            <label>Status</label>
+            <select id="status">
+                <option value="new">New</option>
+                <option value="contacted">Contacted</option>
+                <option value="converted">Converted</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Notes</label>
+            <input type="text" id="notes">
+        </div>
+        <button type="submit">Add Lead</button>
+    </form>
 
-        <table id="leadsTable">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Source</th>
-                    <th>Status</th>
-                    <th>Notes</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+    <div class="controls">
+        <input type="text" id="search" placeholder="Search by name, email, or status...">
     </div>
 
-    <script src="app.js"></script>
+    <table id="leadsTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Source</th>
+                <th>Status</th>
+                <th>Notes</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="app.js"></script>
 </body>
 </html>
