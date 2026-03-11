@@ -1,33 +1,38 @@
-// Select form and table
 const leadForm = document.getElementById('leadForm');
 const leadsTable = document.getElementById('leadsTable').getElementsByTagName('tbody')[0];
 
-// Array to store leads
-let leads = [];
+// Load leads from backend on page load
+fetch('http://localhost:3000/api/leads')
+    .then(res => res.json())
+    .then(data => {
+        data.forEach(addLeadToTable);
+    });
 
 // Handle form submission
 leadForm.addEventListener('submit', function(e) {
     e.preventDefault();
+    const lead = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        source: document.getElementById('source').value,
+        status: document.getElementById('status').value,
+        notes: document.getElementById('notes').value
+    };
 
-    // Get values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const source = document.getElementById('source').value;
-    const status = document.getElementById('status').value;
-    const notes = document.getElementById('notes').value;
-
-    // Create lead object
-    const lead = { name, email, source, status, notes };
-    leads.push(lead);
-
-    // Add lead to table
-    addLeadToTable(lead);
-
-    // Reset form
-    leadForm.reset();
+    // Send to backend
+    fetch('http://localhost:3000/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(lead)
+    })
+    .then(res => res.json())
+    .then(data => {
+        addLeadToTable(lead);
+        leadForm.reset();
+    });
 });
 
-// Function to add a lead row in the table
+// Add lead to table
 function addLeadToTable(lead) {
     const row = leadsTable.insertRow();
     row.insertCell(0).innerText = lead.name;
