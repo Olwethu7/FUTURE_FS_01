@@ -8,6 +8,7 @@ const LIVE_URL = 'https://future-fs-01-5in3.onrender.com/api/leads';
 // Choose which URL to use
 // Change this to LIVE_URL when you deploy
 const API_URL = LIVE_URL;  // or LOCAL_URL for local testing
+const API_URL = '/api/leads';  // works both locally and on Render
 
 // Load leads from backend on page load
 fetch(API_URL)
