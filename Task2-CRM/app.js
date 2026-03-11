@@ -1,12 +1,21 @@
 const leadForm = document.getElementById('leadForm');
 const leadsTable = document.getElementById('leadsTable').getElementsByTagName('tbody')[0];
 
+// Set backend URL: use live Render URL for deployment
+const LOCAL_URL = 'http://localhost:3000/api/leads';
+const LIVE_URL = 'https://future-fs-01-5in3.onrender.com/api/leads';
+
+// Choose which URL to use
+// Change this to LIVE_URL when you deploy
+const API_URL = LIVE_URL;  // or LOCAL_URL for local testing
+
 // Load leads from backend on page load
-fetch('http://localhost:3000/api/leads')
+fetch(API_URL)
     .then(res => res.json())
     .then(data => {
         data.forEach(addLeadToTable);
-    });
+    })
+    .catch(err => console.error('Error fetching leads:', err));
 
 // Handle form submission
 leadForm.addEventListener('submit', function(e) {
@@ -20,7 +29,7 @@ leadForm.addEventListener('submit', function(e) {
     };
 
     // Send to backend
-    fetch('http://localhost:3000/api/leads', {
+    fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(lead)
@@ -29,7 +38,8 @@ leadForm.addEventListener('submit', function(e) {
     .then(data => {
         addLeadToTable(lead);
         leadForm.reset();
-    });
+    })
+    .catch(err => console.error('Error adding lead:', err));
 });
 
 // Add lead to table
