@@ -1,42 +1,32 @@
 const leadForm = document.getElementById('leadForm');
 const leadsTable = document.getElementById('leadsTable').getElementsByTagName('tbody')[0];
 
-// Set backend URL: use live Render URL for deployment
-const LOCAL_URL = 'http://localhost:3000/api/leads';
-const LIVE_URL = 'https://future-fs-01-5in3.onrender.com/api/leads';
+const API_URL = '/api/leads'; // works locally and on Render
 
-// Choose which URL to use
-// Change this to LIVE_URL when you deploy
-const API_URL = LIVE_URL;  // or LOCAL_URL for local testing
-const API_URL = '/api/leads';  // works both locally and on Render
-
-// Load leads from backend on page load
+// Load existing leads
 fetch(API_URL)
     .then(res => res.json())
-    .then(data => {
-        data.forEach(addLeadToTable);
-    })
+    .then(data => data.forEach(addLeadToTable))
     .catch(err => console.error('Error fetching leads:', err));
 
-// Handle form submission
-leadForm.addEventListener('submit', function(e) {
+// Handle form submit
+leadForm.addEventListener('submit', e => {
     e.preventDefault();
     const lead = {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
-        source: document.getElementById('source').value,
+        source: document.getElementById('source').value || 'N/A',
         status: document.getElementById('status').value,
         notes: document.getElementById('notes').value
     };
 
-    // Send to backend
     fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(lead)
     })
     .then(res => res.json())
-    .then(data => {
+    .then(() => {
         addLeadToTable(lead);
         leadForm.reset();
     })
