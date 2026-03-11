@@ -4,12 +4,12 @@ body {
     padding: 20px;
 }
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 h1 {
     text-align: center;
@@ -37,9 +37,19 @@ button {
     border: none;
     cursor: pointer;
 }
-button:hover {
-    background-color: #218838;
+button:hover { background-color: #218838; }
+
+.controls {
+    margin-bottom: 15px;
+    text-align: right;
 }
+#search {
+    padding: 6px 10px;
+    width: 250px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -53,3 +63,16 @@ th {
     background-color: #007bff;
     color: white;
 }
+
+.action-btn {
+    padding: 4px 8px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+.edit-btn { background-color: #ffc107; }
+.delete-btn { background-color: #dc3545; }
+.edit-btn:hover { background-color: #e0a800; }
+.delete-btn:hover { background-color: #c82333; }
