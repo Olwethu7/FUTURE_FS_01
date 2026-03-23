@@ -6,14 +6,17 @@
   <title>New Legacy Barbershop</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Optional Lightbox CSS for gallery -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav id="navbar">
     <div class="logo">New Legacy Barbershop</div>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#services">Services</a></li>
@@ -23,8 +26,7 @@
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
+  <section id="home" class="hero reveal">
     <div class="hero-content">
       <h1>Precision Haircuts. Legacy Style.</h1>
       <p>Monday-Sunday: 08:00 AM – 07:00 PM</p>
@@ -32,7 +34,6 @@
     </div>
   </section>
 
-  <!-- Services Section -->
   <section id="services" class="services">
     <h2>Our Services</h2>
     <div class="services-grid">
@@ -45,37 +46,29 @@
     </div>
   </section>
 
-  <!-- Gallery Section -->
   <section id="gallery" class="gallery">
     <h2>Gallery</h2>
     <div class="gallery-grid">
-      <!-- All 12 images from your links -->
-      <a href="https://lh3.googleusercontent.com/sitesv/APaQ0SQs5Qvxjs9LhgwLZJszeyykDVW247a60ghr254Hha5uuIhpDwwHpSxWSByBi1zqdA20WMwTvA7yRriWC9PEcwiFOLJSyBhVIPGjaNDu-zEyN1a2wJaoO0Vwa60kUB0BnZva27rxEcuoqDt3asvQv2HRpwXIQD_QCWMNBTvk_JVHNdENzqfMeGr3Xnmw_DQLxR9-bDu0iojfO4hHMeS4xYF-XnRytfWf6CRRet4=w1280" data-lightbox="gallery" data-title="Haircut 1"><img src="https://lh3.googleusercontent.com/sitesv/APaQ0SQs5Qvxjs9LhgwLZJszeyykDVW247a60ghr254Hha5uuIhpDwwHpSxWSByBi1zqdA20WMwTvA7yRriWC9PEcwiFOLJSyBhVIPGjaNDu-zEyN1a2wJaoO0Vwa60kUB0BnZva27rxEcuoqDt3asvQv2HRpwXIQD_QCWMNBTvk_JVHNdENzqfMeGr3Xnmw_DQLxR9-bDu0iojfO4hHMeS4xYF-XnRytfWf6CRRet4=w1280" alt="Haircut 1"></a>
-      
-      <a href="https://lh3.googleusercontent.com/sitesv/APaQ0SRetk9uV2mi1unczJqriqD1WuNHjuLhhZtokK6-I98ylMBpHdD1Mj-6Ok9V_7LcS6MNQxAHh0VWX3IdGIqhsGULoyDrqUene1h4jQ3TQCp5EaCVzB4xky3t0AnTpgYpCE9muK3M8L5zXXOfBU8r6ThyASbnT3cR13UXL9w4SN5_nHEjtfL7yonW0fwn5HscC2kDUdLLhzSWTHlj04ixuo8rL5GPcCpmJGcO8ME=w1280" data-lightbox="gallery" data-title="Haircut 2"><img src="https://lh3.googleusercontent.com/sitesv/APaQ0SRetk9uV2mi1unczJqriqD1WuNHjuLhhZtokK6-I98ylMBpHdD1Mj-6Ok9V_7LcS6MNQxAHh0VWX3IdGIqhsGULoyDrqUene1h4jQ3TQCp5EaCVzB4xky3t0AnTpgYpCE9muK3M8L5zXXOfBU8r6ThyASbnT3cR13UXL9w4SN5_nHEjtfL7yonW0fwn5HscC2kDUdLLhzSWTHlj04ixuo8rL5GPcCpmJGcO8ME=w1280" alt="Haircut 2"></a>
-
-      <a href="https://lh3.googleusercontent.com/sitesv/APa0SREJniwKtzrXO0MP7X0xwCw7IaRoOKL9cQFRN_1A3vhAdg_-1FZc4kWkOz187GrFtLl9K2hvAeVyF6oRtMg_7hsiBeLRR7KvPaOIf6g77pkj13_b68c2kAjSWRUNG1C7pmIMZw8xUXow_vFiiZWv54AqADo3Bp9pi0FcwbR3U2bcHnGQ2rSUJbmJO3R1cwe8X7TqibBluk6GnN403wUavNSuDsLLLV4a24A=w1280" data-lightbox="gallery" data-title="Haircut 3"><img src="https://lh3.googleusercontent.com/sitesv/APa0SREJniwKtzrXO0MP7X0xwCw7IaRoOKL9cQFRN_1A3vhAdg_-1FZc4kWkOz187GrFtLl9K2hvAeVyF6oRtMg_7hsiBeLRR7KvPaOIf6g77pkj13_b68c2kAjSWRUNG1C7pmIMZw8xUXow_vFiiZWv54AqADo3Bp9pi0FcwbR3U2bcHnGQ2rSUJbmJO3R1cwe8X7TqibBluk6GnN403wUavNSuDsLLLV4a24A=w1280" alt="Haircut 3"></a>
-
-      <a href="https://lh3.googleusercontent.com/sitesv/APa0SS9ULhDi2wseUQn6juiata4D3GtIMdJ8n2MSeD2qAb1CUQ5qAWOigTBrUAAmnWLIg2FPq8jgSAtL_rSScmsidy6pk4qJTg1LheO8aiaxhExewVlTU9jdvlnC9WpiG65_y1338clFiUU0dwqanYaP0RlF8c3u_5TRsLXHyzkfjv15vMZmRTv6BNuv-oxp8tNdp1smdcNsY11BK2xNRtFHbbd5vISmWUrtb0DKaU=w1280" data-lightbox="gallery" data-title="Haircut 4"><img src="https://lh3.googleusercontent.com/sitesv/APa0SS9ULhDi2wseUQn6juiata4D3GtIMdJ8n2MSeD2qAb1CUQ5qAWOigTBrUAAmnWLIg2FPq8jgSAtL_rSScmsidy6pk4qJTg1LheO8aiaxhExewVlTU9jdvlnC9WpiG65_y1338clFiUU0dwqanYaP0RlF8c3u_5TRsLXHyzkfjv15vMZmRTv6BNuv-oxp8tNdp1smdcNsY11BK2xNRtFHbbd5vISmWUrtb0DKaU=w1280" alt="Haircut 4"></a>
-
-      <a href="https://lh3.googleusercontent.com/sitesv/APa0SQxnMniHnmrx3QCZdcse_6ZQEg56ROmGEJP7Zl6YQJsBK_nBbaP7nx6AHOE94WKYzMQmtajBV0C19o2lzAci1CYq2pks65mG4nYwsuydNoxNmibk6uPeSzmVBBq67M6synUquh5VXrYfRRy..." data-lightbox="gallery" data-title="Haircut 5"><img src="https://lh3.googleusercontent.com/sitesv/APa0SQxnMniHnmrx3QCZdcse_6ZQEg56ROmGEJP7Zl6YQJsBK_nBbaP7nx6AHOE94WKYzMQmtajBV0C19o2lzAci1CYq2pks65mG4nYwsuydNoxNmibk6uPeSzmVBBq67M6synUquh5VXrYfRRy..." alt="Haircut 5"></a>
-
-      <!-- Repeat same structure for Haircut 6 to Haircut 12 using remaining URLs -->
+      <a href="https://lh3.googleusercontent.com/d-NaxobO4snXDqZOr9sGMkfJ1VTuIDtQRk1j3Ch52tejVQu7vKd7UHf5YvP5SjUwsaLSk8M2iHJnkl8bkg=s360-w360-h360" data-lightbox="gallery"><img src="https://lh3.googleusercontent.com/d-NaxobO4snXDqZOr9sGMkfJ1VTuIDtQRk1j3Ch52tejVQu7vKd7UHf5YvP5SjUwsaLSk8M2iHJnkl8bkg=s360-w360-h360" alt="Style 6"></a>
+      <a href="https://lh3.googleusercontent.com/4Zf36q4mA-2KkJLOecnkiWEoKbzfrLXJ_CndoGL1fw3K2uKguHh-aAC_rSsKOSS9g89wjDf2P1Mq0Q3l_w=s360-w360-h360" data-lightbox="gallery"><img src="https://lh3.googleusercontent.com/4Zf36q4mA-2KkJLOecnkiWEoKbzfrLXJ_CndoGL1fw3K2uKguHh-aAC_rSsKOSS9g89wjDf2P1Mq0Q3l_w=s360-w360-h360" alt="Style 7"></a>
+      <a href="https://lh3.googleusercontent.com/MAv78FK74Kd1mRjPVMDeQNdGH3p4JG7xXgiA7VIu4rZfO-0ndC5pzAcUrkczk-s6kRkHyCLRwmzW9UxDqQ=s360-w360-h360" data-lightbox="gallery"><img src="https://lh3.googleusercontent.com/MAv78FK74Kd1mRjPVMDeQNdGH3p4JG7xXgiA7VIu4rZfO-0ndC5pzAcUrkczk-s6kRkHyCLRwmzW9UxDqQ=s360-w360-h360" alt="Style 8"></a>
+      <a href="https://lh3.googleusercontent.com/eCZr1CAuY68zMP8bvL_MIBVHKQ8H-0ZSxA4QHogRG-gMkZpFu1pNrSJtf5ga5WkeE6UAVlo60eQJOPmU=s360-w360-h360" data-lightbox="gallery"><img src="https://lh3.googleusercontent.com/eCZr1CAuY68zMP8bvL_MIBVHKQ8H-0ZSxA4QHogRG-gMkZpFu1pNrSJtf5ga5WkeE6UAVlo60eQJOPmU=s360-w360-h360" alt="Style 9"></a>
+      <a href="https://lh3.googleusercontent.com/B9Jk1_QGfhNlJOe2abID5EuZnQI0NoUiorXlP5BIkuDFeYDAYVftxR6Oq8hgiD-t4IphX_323uE84chT=s360-w360-h360" data-lightbox="gallery"><img src="https://lh3.googleusercontent.com/B9Jk1_QGfhNlJOe2abID5EuZnQI0NoUiorXlP5BIkuDFeYDAYVftxR6Oq8hgiD-t4IphX_323uE84chT=s360-w360-h360" alt="Style 10"></a>
+      <a href="https://lh3.googleusercontent.com/RG2Pa11I4xYBsW96vwAiYJwtpI-LKdLYXSfr-nnjx7mkrouIFYHXqFLi-dVimM4u_-jiMRCL7ozvuGhl=s360-w360-h360" data-lightbox="gallery"><img src="https://lh3.googleusercontent.com/RG2Pa11I4xYBsW96vwAiYJwtpI-LKdLYXSfr-nnjx7mkrouIFYHXqFLi-dVimM4u_-jiMRCL7ozvuGhl=s360-w360-h360" alt="Style 11"></a>
+      <a href="https://lh3.googleusercontent.com/TnG-gdnVsWqEhLCZ6AJyxm6ICyggHQMXNhAouPsfMXt92rzA4xf7xtfjTCmMiB6IwV6yuc1e7zumNOPZ6w=s360-w360-h360" data-lightbox="gallery"><img src="https://lh3.googleusercontent.com/TnG-gdnVsWqEhLCZ6AJyxm6ICyggHQMXNhAouPsfMXt92rzA4xf7xtfjTCmMiB6IwV6yuc1e7zumNOPZ6w=s360-w360-h360" alt="Style 12"></a>
+      <a href="https://lh3.googleusercontent.com/OZX1Ozh6T8KzRy9_uLXT9gdXfcX7QqOD8UNrclqsT7TyZbY84GaMWKDuIBRrAN0k5Vi4F2qAZ1KuNHWraw=s360-w360-h360" data-lightbox="gallery"><img src="https://lh3.googleusercontent.com/OZX1Ozh6T8KzRy9_uLXT9gdXfcX7QqOD8UNrclqsT7TyZbY84GaMWKDuIBRrAN0k5Vi4F2qAZ1KuNHWraw=s360-w360-h360" alt="Style 13"></a>
+      <a href="https://lh3.googleusercontent.com/3qYpIwarYodh8pSpk_0VoFdr9hd4T4TGbOzzTk311r9MvcLXzzstM9W4hvVqZngsVnvGwpuvW9peE27RgA=s360-w360-h360" data-lightbox="gallery"><img src="https://lh3.googleusercontent.com/3qYpIwarYodh8pSpk_0VoFdr9hd4T4TGbOzzTk311r9MvcLXzzstM9W4hvVqZngsVnvGwpuvW9peE27RgA=s360-w360-h360" alt="Style 14"></a>
     </div>
   </section>
 
-  <!-- About Section -->
   <section id="about" class="about">
     <h2>About Us</h2>
     <p>New Legacy Barbershop started in 2023. We provide high-quality haircuts wherever you are—mobile, professional, and passionate. Founder-operated and sponsor-free, we deliver barbering excellence across Bizana Nomlacu and Durban CBD.</p>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2>Book a Haircut</h2>
     <p>Phone/WhatsApp: <a href="tel:+27695922556">+27 69 592 2556</a></p>
-    <p>Email: <a href="mailto:newlegacybarbershop10@gmail.com">newlegacybarbershop10@gmail.com</a></p>
-
     <form action="https://formspree.io/f/mnqwoqgb" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
@@ -84,12 +77,12 @@
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 New Legacy Barbershop. All Rights Reserved.</p>
+    <p>© 2024 New Legacy Barbershop. All Rights Reserved.</p>
   </footer>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
   <script src="script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
