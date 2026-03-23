@@ -1,0 +1,37 @@
+body {
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input, select, textarea {
+  padding: 8px;
+}
+
+button {
+  background: #38bdf8;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  background: #1e293b;
+}
+
+td, th {
+  padding: 10px;
+}
