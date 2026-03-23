@@ -126,18 +126,34 @@ section.reveal {
     font-family: inherit;
 }
 
-/* FIXED CENTERED FOOTER */
+/* FIXED / CENTERED FOOTER */
 footer {
     background: #000;
     color: #888;
     padding: 40px 20px;
-    text-align: center; /* Basic centering */
+    text-align: center; /* text inside centered */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Flex centering */
-    justify-content: center;
+    align-items: center; /* center horizontally */
+    justify-content: center; /* center vertically inside footer */
     border-top: 1px solid #222;
     margin-top: 60px;
+    width: 100%; /* full width */
+    bottom: 0; /* optional if you want sticky */
+}
+
+/* For always sticking footer to bottom if page content is short */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main, .hero, .services, .gallery, .contact {
+    flex: 1; /* makes content take remaining space so footer stays bottom */
 }
 
 footer p {
