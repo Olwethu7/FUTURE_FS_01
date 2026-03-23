@@ -1,67 +1,60 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const bodyParser = require('body-parser');
-const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const leadsFile = path.join(__dirname, 'leads.json');
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(bodyParser.json());
-app.use(cors());
-app.use(express.static(__dirname)); // serve frontend files
+const DATA_FILE = path.join(__dirname, 'leads.json');
 
-// Helper to read leads
+// Read leads
 function readLeads() {
-    if (!fs.existsSync(leadsFile)) return [];
-    const data = fs.readFileSync(leadsFile);
-    return JSON.parse(data || '[]');
+  if (!fs.existsSync(DATA_FILE)) return [];
+  return JSON.parse(fs.readFileSync(DATA_FILE));
 }
 
-// Helper to write leads
-function writeLeads(leads) {
-    fs.writeFileSync(leadsFile, JSON.stringify(leads, null, 2));
+// Write leads
+function writeLeads(data) {
+  fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
 }
 
 // GET all leads
 app.get('/api/leads', (req, res) => {
-    res.json(readLeads());
+  const leads = readLeads();
+  res.json(leads);
 });
 
-// POST a new lead
+// ADD lead
 app.post('/api/leads', (req, res) => {
-    const leads = readLeads();
-    const newLead = req.body;
-    newLead.id = Date.now(); // unique id
-    leads.push(newLead);
-    writeLeads(leads);
-    res.json(newLead);
-});
-
-// PUT / Update lead
-app.put('/api/leads/:id', (req, res) => {
-    const leads = readLeads();
-    const id = parseInt(req.params.id);
-    const index = leads.findIndex(l => l.id === id);
-    if (index === -1) return res.status(404).json({ error: 'Lead not found' });
-
-    leads[index] = { ...leads[index], ...req.body };
-    writeLeads(leads);
-    res.json(leads[index]);
+  const leads = readLeads();
+  const newLead = {
+    id: Date.now(),
+    ...req.body
+  };
+  leads.push(newLead);
+  writeLeads(leads);
+  res.json(newLead);
 });
 
 // DELETE lead
 app.delete('/api/leads/:id', (req, res) => {
-    const leads = readLeads();
-    const id = parseInt(req.params.id);
-    const newLeads = leads.filter(l => l.id !== id);
-    writeLeads(newLeads);
-    res.json({ message: 'Lead deleted' });
+  let leads = readLeads();
+  leads = leads.filter(l => l.id != req.params.id);
+  writeLeads(leads);
+  res.json({ message: 'Deleted' });
 });
 
-// Serve frontend
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
+// UPDATE status
+app.put('/api/leads/:id', (req, res) => {
+  let leads = readLeads();
+  leads = leads.map(l =>
+    l.id == req.params.id ? { ...l, ...req.body } : l
+  );
+  writeLeads(leads);
+  res.json({ message: 'Updated' });
+});
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
