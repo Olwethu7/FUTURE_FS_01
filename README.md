@@ -21,25 +21,3 @@ A modern, advanced barbershop website for New Legacy Barbershop. The site focuse
 Technologies: HTML, CSS, JavaScript, responsive grid layouts, email form via Formspree.
 Live Link: [View Task 3 Barbershop Website](https://olwethu-cwele-task3-barbershop.netlify.app/)
 
-FUTURE_FS_01/
-├── Task1-Portfolio/
-│   ├── index.html
-│   ├── style.css
-│   ├── script.js
-│   └── README.md
-│
-├── Task2-CRM/
-│   ├── server.js
-│   ├── package.json
-│   └── public/
-│       ├── index.html
-│       ├── style.css
-│       └── script.js
-│
-├── Task3-Barbershop/
-│   ├── index.html
-│   ├── style.css
-│   ├── script.js
-│   └── images/  (optional local images)
-│
-└── README.md
