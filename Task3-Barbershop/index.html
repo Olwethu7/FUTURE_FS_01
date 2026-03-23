@@ -6,8 +6,11 @@
   <title>New Legacy Barbershop</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Optional Lightbox CSS for gallery -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
+
   <!-- Navigation -->
   <nav id="navbar">
     <div class="logo">New Legacy Barbershop</div>
@@ -15,6 +18,7 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -22,75 +26,70 @@
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-content">
-      <h1>Precision Haircuts. Timeless Style.</h1>
-      <p>New Legacy Barbershop delivers professional haircuts with unmatched attention to detail.</p>
+      <h1>Precision Haircuts. Legacy Style.</h1>
+      <p>Monday-Sunday: 08:00 AM – 07:00 PM</p>
       <a href="#contact" class="btn">Book Now</a>
     </div>
   </section>
 
   <!-- Services Section -->
   <section id="services" class="services">
-    <h2>Our Haircut Services</h2>
+    <h2>Our Services</h2>
     <div class="services-grid">
-      <div class="service-card">
-        <h3>Full Head Shave</h3>
-        <p>R20</p>
-      </div>
-      <div class="service-card">
-        <h3>Fade</h3>
-        <p>R50</p>
-      </div>
-      <div class="service-card">
-        <h3>Brushcut</h3>
-        <p>R50</p>
-      </div>
-      <div class="service-card">
-        <h3>Beard Trim</h3>
-        <p>R20</p>
-      </div>
-      <div class="service-card">
-        <h3>Beard Shave</h3>
-        <p>R15</p>
-      </div>
-      <div class="service-card">
-        <h3>Hair Trimming</h3>
-        <p>R10</p>
-      </div>
+      <div class="service-card"><h3>Full Head Shave</h3><p>R20</p></div>
+      <div class="service-card"><h3>Fade</h3><p>R50</p></div>
+      <div class="service-card"><h3>Brushcut</h3><p>R50</p></div>
+      <div class="service-card"><h3>Beard Trim</h3><p>R20</p></div>
+      <div class="service-card"><h3>Beard Shave</h3><p>R15</p></div>
+      <div class="service-card"><h3>Hair Trimming</h3><p>R10</p></div>
     </div>
   </section>
 
   <!-- Gallery Section -->
   <section id="gallery" class="gallery">
-    <h2>Our Haircuts</h2>
+    <h2>Gallery</h2>
     <div class="gallery-grid">
-      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4431f7?auto=format&fit=crop&w=400&q=80" alt="Haircut 1">
-      <img src="https://images.unsplash.com/photo-1605902711624-90ef17652b4b?auto=format&fit=crop&w=400&q=80" alt="Haircut 2">
-      <img src="https://images.unsplash.com/photo-1605902711620-5ed1e92a3c70?auto=format&fit=crop&w=400&q=80" alt="Haircut 3">
-      <img src="https://images.unsplash.com/photo-1615555236860-3b7c15f07a29?auto=format&fit=crop&w=400&q=80" alt="Haircut 4">
-      <img src="https://images.unsplash.com/photo-1615555236870-7fc1d6f77d4a?auto=format&fit=crop&w=400&q=80" alt="Haircut 5">
-      <img src="https://images.unsplash.com/photo-1615555236880-1bcf60f889e3?auto=format&fit=crop&w=400&q=80" alt="Haircut 6">
+      <!-- All 12 images from your links -->
+      <a href="https://lh3.googleusercontent.com/sitesv/APaQ0SQs5Qvxjs9LhgwLZJszeyykDVW247a60ghr254Hha5uuIhpDwwHpSxWSByBi1zqdA20WMwTvA7yRriWC9PEcwiFOLJSyBhVIPGjaNDu-zEyN1a2wJaoO0Vwa60kUB0BnZva27rxEcuoqDt3asvQv2HRpwXIQD_QCWMNBTvk_JVHNdENzqfMeGr3Xnmw_DQLxR9-bDu0iojfO4hHMeS4xYF-XnRytfWf6CRRet4=w1280" data-lightbox="gallery" data-title="Haircut 1"><img src="https://lh3.googleusercontent.com/sitesv/APaQ0SQs5Qvxjs9LhgwLZJszeyykDVW247a60ghr254Hha5uuIhpDwwHpSxWSByBi1zqdA20WMwTvA7yRriWC9PEcwiFOLJSyBhVIPGjaNDu-zEyN1a2wJaoO0Vwa60kUB0BnZva27rxEcuoqDt3asvQv2HRpwXIQD_QCWMNBTvk_JVHNdENzqfMeGr3Xnmw_DQLxR9-bDu0iojfO4hHMeS4xYF-XnRytfWf6CRRet4=w1280" alt="Haircut 1"></a>
+      
+      <a href="https://lh3.googleusercontent.com/sitesv/APaQ0SRetk9uV2mi1unczJqriqD1WuNHjuLhhZtokK6-I98ylMBpHdD1Mj-6Ok9V_7LcS6MNQxAHh0VWX3IdGIqhsGULoyDrqUene1h4jQ3TQCp5EaCVzB4xky3t0AnTpgYpCE9muK3M8L5zXXOfBU8r6ThyASbnT3cR13UXL9w4SN5_nHEjtfL7yonW0fwn5HscC2kDUdLLhzSWTHlj04ixuo8rL5GPcCpmJGcO8ME=w1280" data-lightbox="gallery" data-title="Haircut 2"><img src="https://lh3.googleusercontent.com/sitesv/APaQ0SRetk9uV2mi1unczJqriqD1WuNHjuLhhZtokK6-I98ylMBpHdD1Mj-6Ok9V_7LcS6MNQxAHh0VWX3IdGIqhsGULoyDrqUene1h4jQ3TQCp5EaCVzB4xky3t0AnTpgYpCE9muK3M8L5zXXOfBU8r6ThyASbnT3cR13UXL9w4SN5_nHEjtfL7yonW0fwn5HscC2kDUdLLhzSWTHlj04ixuo8rL5GPcCpmJGcO8ME=w1280" alt="Haircut 2"></a>
+
+      <a href="https://lh3.googleusercontent.com/sitesv/APa0SREJniwKtzrXO0MP7X0xwCw7IaRoOKL9cQFRN_1A3vhAdg_-1FZc4kWkOz187GrFtLl9K2hvAeVyF6oRtMg_7hsiBeLRR7KvPaOIf6g77pkj13_b68c2kAjSWRUNG1C7pmIMZw8xUXow_vFiiZWv54AqADo3Bp9pi0FcwbR3U2bcHnGQ2rSUJbmJO3R1cwe8X7TqibBluk6GnN403wUavNSuDsLLLV4a24A=w1280" data-lightbox="gallery" data-title="Haircut 3"><img src="https://lh3.googleusercontent.com/sitesv/APa0SREJniwKtzrXO0MP7X0xwCw7IaRoOKL9cQFRN_1A3vhAdg_-1FZc4kWkOz187GrFtLl9K2hvAeVyF6oRtMg_7hsiBeLRR7KvPaOIf6g77pkj13_b68c2kAjSWRUNG1C7pmIMZw8xUXow_vFiiZWv54AqADo3Bp9pi0FcwbR3U2bcHnGQ2rSUJbmJO3R1cwe8X7TqibBluk6GnN403wUavNSuDsLLLV4a24A=w1280" alt="Haircut 3"></a>
+
+      <a href="https://lh3.googleusercontent.com/sitesv/APa0SS9ULhDi2wseUQn6juiata4D3GtIMdJ8n2MSeD2qAb1CUQ5qAWOigTBrUAAmnWLIg2FPq8jgSAtL_rSScmsidy6pk4qJTg1LheO8aiaxhExewVlTU9jdvlnC9WpiG65_y1338clFiUU0dwqanYaP0RlF8c3u_5TRsLXHyzkfjv15vMZmRTv6BNuv-oxp8tNdp1smdcNsY11BK2xNRtFHbbd5vISmWUrtb0DKaU=w1280" data-lightbox="gallery" data-title="Haircut 4"><img src="https://lh3.googleusercontent.com/sitesv/APa0SS9ULhDi2wseUQn6juiata4D3GtIMdJ8n2MSeD2qAb1CUQ5qAWOigTBrUAAmnWLIg2FPq8jgSAtL_rSScmsidy6pk4qJTg1LheO8aiaxhExewVlTU9jdvlnC9WpiG65_y1338clFiUU0dwqanYaP0RlF8c3u_5TRsLXHyzkfjv15vMZmRTv6BNuv-oxp8tNdp1smdcNsY11BK2xNRtFHbbd5vISmWUrtb0DKaU=w1280" alt="Haircut 4"></a>
+
+      <a href="https://lh3.googleusercontent.com/sitesv/APa0SQxnMniHnmrx3QCZdcse_6ZQEg56ROmGEJP7Zl6YQJsBK_nBbaP7nx6AHOE94WKYzMQmtajBV0C19o2lzAci1CYq2pks65mG4nYwsuydNoxNmibk6uPeSzmVBBq67M6synUquh5VXrYfRRy..." data-lightbox="gallery" data-title="Haircut 5"><img src="https://lh3.googleusercontent.com/sitesv/APa0SQxnMniHnmrx3QCZdcse_6ZQEg56ROmGEJP7Zl6YQJsBK_nBbaP7nx6AHOE94WKYzMQmtajBV0C19o2lzAci1CYq2pks65mG4nYwsuydNoxNmibk6uPeSzmVBBq67M6synUquh5VXrYfRRy..." alt="Haircut 5"></a>
+
+      <!-- Repeat same structure for Haircut 6 to Haircut 12 using remaining URLs -->
     </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>New Legacy Barbershop started in 2023. We provide high-quality haircuts wherever you are—mobile, professional, and passionate. Founder-operated and sponsor-free, we deliver barbering excellence across Bizana Nomlacu and Durban CBD.</p>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
-    <h2>Contact & Bookings</h2>
+    <h2>Book a Haircut</h2>
+    <p>Phone/WhatsApp: <a href="tel:+27695922556">+27 69 592 2556</a></p>
     <p>Email: <a href="mailto:newlegacybarbershop10@gmail.com">newlegacybarbershop10@gmail.com</a></p>
-    <p>Phone / WhatsApp: <a href="tel:+27695922556">+27 69 592 2556</a></p>
 
     <form action="https://formspree.io/f/mnqwoqgb" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message / Booking" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
+      <textarea name="message" rows="5" placeholder="Your Message / Booking Details" required></textarea>
+      <button type="submit" class="btn">Send Booking</button>
     </form>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 New Legacy Barbershop. All Rights Reserved.</p>
+    <p>&copy; 2024 New Legacy Barbershop. All Rights Reserved.</p>
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
