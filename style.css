@@ -1,81 +1,98 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
   margin: 0;
-  background-color: #f0f2f5;
-  color: #333;
-}
-
-header {
-  background-color: #1f2937;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-header nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-header nav a:hover {
-  text-decoration: underline;
-}
-
-section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-}
-
-.skills-list {
-  list-style: none;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.skills-list li {
-  display: inline-block;
-  background-color: #2563eb;
+body {
+  background: #0f172a;
   color: white;
-  padding: 5px 15px;
-  margin: 5px;
-  border-radius: 20px;
-  font-weight: bold;
 }
 
-.projects-container {
+/* Navbar */
+.navbar {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 10%;
+  background: #020617;
+  position: sticky;
+  top: 0;
+}
+
+.nav-links {
+  display: flex;
   gap: 20px;
+  list-style: none;
 }
 
-.project-card {
-  flex: 1 1 300px;
-  background-color: #e5e7eb;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.project-card a {
-  display: inline-block;
-  margin-top: 10px;
+.nav-links a {
+  color: white;
   text-decoration: none;
-  color: #1d4ed8;
-  font-weight: bold;
 }
 
-.project-card a:hover {
-  text-decoration: underline;
+.nav-links a:hover {
+  color: #38bdf8;
 }
 
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero span {
+  color: #38bdf8;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #38bdf8;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Sections */
+.section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+/* Skills */
+.skills-grid {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.skill {
+  background: #1e293b;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Projects */
+.projects-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #1f2937;
-  color: white;
-  margin-top: 40px;
+  background: #020617;
 }
