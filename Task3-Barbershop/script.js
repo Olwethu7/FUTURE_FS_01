@@ -1,5 +1,6 @@
-// Smooth scroll for navigation links
+// Simple smooth scroll for nav links
 const navLinks = document.querySelectorAll('nav ul li a');
+
 navLinks.forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
