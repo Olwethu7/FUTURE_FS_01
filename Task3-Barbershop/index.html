@@ -6,6 +6,8 @@
   <title>New Legacy Barbershop</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Lightbox CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -33,9 +35,9 @@
 <!-- About Section -->
 <section id="about" class="about reveal">
   <h2>About Us</h2>
-  <p>Welcome to New Legacy Barbershop, a unique and personal barbering experience that began in 2023. Our barbershop is independently owned and operated, reflecting a true passion for the craft of barbering.</p>
-  <p>We believe in delivering quality service wherever we are. Our founder, a self-employed barber, runs the business entirely on his own. While we don't yet have a permanent salon space, our services are available from Bizana Nomlacu during holiday seasons and Durban CBD after the holidays.</p>
-  <p>Using a mobile approach, we ensure loyal clients receive the best care, wherever the location. At New Legacy Barbershop, it's all about creating a lasting legacy of excellence.</p>
+  <p>New Legacy Barbershop began in 2023 and is independently owned, reflecting a true passion for barbering.</p>
+  <p>We offer mobile services in Bizana Nomlacu during holidays and Durban CBD year-round, ensuring loyal clients get the best care wherever they are.</p>
+  <p>Our goal is to create a lasting legacy of excellence in barbering.</p>
 </section>
 
 <!-- Services Section -->
@@ -43,34 +45,22 @@
   <h2>Our Services</h2>
   <div class="services-grid">
     <div class="service-card">
-      <h3>Full Head Shave</h3>
-      <p>R20</p>
-      <p>Complete removal of all hair for a clean, smooth look.</p>
+      <h3>Full Head Shave</h3><p>R20</p><p>Complete removal of all hair for a smooth look.</p>
     </div>
     <div class="service-card">
-      <h3>Fade</h3>
-      <p>R50</p>
-      <p>Precision fade haircuts, blending from short to long for a sharp, modern style.</p>
+      <h3>Fade</h3><p>R50</p><p>Precision fade haircuts for a modern sharp style.</p>
     </div>
     <div class="service-card">
-      <h3>Brushcut</h3>
-      <p>R50</p>
-      <p>A clean and even short haircut using clippers for a neat appearance.</p>
+      <h3>Brushcut</h3><p>R50</p><p>Clean and even short haircut using clippers.</p>
     </div>
     <div class="service-card">
-      <h3>Beard Trim</h3>
-      <p>R20</p>
-      <p>Shaping and trimming beards to maintain a well-groomed look.</p>
+      <h3>Beard Trim</h3><p>R20</p><p>Shape and maintain a well-groomed beard.</p>
     </div>
     <div class="service-card">
-      <h3>Beard Shave</h3>
-      <p>R15</p>
-      <p>Full beard removal with a razor or clippers for a smooth face.</p>
+      <h3>Beard Shave</h3><p>R15</p><p>Full beard removal for a clean-shaven face.</p>
     </div>
     <div class="service-card">
-      <h3>Hair Trimming</h3>
-      <p>R10</p>
-      <p>Regular trims to maintain length, tidy up, or refresh your style.</p>
+      <h3>Hair Trimming</h3><p>R10</p><p>Regular trims to refresh your style.</p>
     </div>
   </div>
 </section>
@@ -79,14 +69,14 @@
 <section id="gallery" class="gallery reveal">
   <h2>Gallery</h2>
   <div class="gallery-grid">
-    <img src="images/haircut1.jpg" alt="Haircut 1" class="gallery-img">
-    <img src="images/haircut2.jpg" alt="Haircut 2" class="gallery-img">
-    <img src="images/haircut3.jpg" alt="Haircut 3" class="gallery-img">
-    <img src="images/haircut4.jpg" alt="Haircut 4" class="gallery-img">
+    <a href="images/haircut1.jpg" data-lightbox="gallery" data-title="Haircut 1"><img src="images/haircut1.jpg" alt="Haircut 1"></a>
+    <a href="images/haircut2.jpg" data-lightbox="gallery" data-title="Haircut 2"><img src="images/haircut2.jpg" alt="Haircut 2"></a>
+    <a href="images/haircut3.jpg" data-lightbox="gallery" data-title="Haircut 3"><img src="images/haircut3.jpg" alt="Haircut 3"></a>
+    <a href="images/haircut4.jpg" data-lightbox="gallery" data-title="Haircut 4"><img src="images/haircut4.jpg" alt="Haircut 4"></a>
   </div>
 </section>
 
-<!-- Contact / Booking Section -->
+<!-- Booking Section -->
 <section id="contact" class="contact reveal">
   <h2>Book Your Appointment</h2>
   <p>Phone / WhatsApp: <a href="tel:+27695922556">+27 69 592 2556</a></p>
@@ -96,7 +86,7 @@
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
     <input type="tel" name="phone" placeholder="Phone / WhatsApp" required>
-    <textarea name="message" rows="5" placeholder="Your Message / Appointment Details" required></textarea>
+    <textarea name="message" rows="5" placeholder="Appointment Details" required></textarea>
     <button type="submit" class="btn">Send Booking</button>
   </form>
 </section>
@@ -106,6 +96,8 @@
   <p>&copy; 2024 New Legacy Barbershop. All rights reserved.</p>
 </footer>
 
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
