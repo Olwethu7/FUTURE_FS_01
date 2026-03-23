@@ -1,23 +1,34 @@
-// Smooth Scroll & Active Nav Link
-const navLinks=document.querySelectorAll('.nav-link');
-navLinks.forEach(link=>{
-  link.addEventListener('click',e=>{
-    e.preventDefault();
-    const target=document.querySelector(link.getAttribute('href'));
-    target.scrollIntoView({behavior:'smooth'});
-    navLinks.forEach(l=>l.classList.remove('active'));
-    link.classList.add('active');
-  });
+// Mobile Menu Toggle
+const menu = document.querySelector('#mobile-menu');
+const navList = document.querySelector('.nav-links');
+
+menu.addEventListener('click', () => {
+    navList.classList.toggle('active');
 });
 
-// Reveal sections on scroll
-const sections=document.querySelectorAll('section');
-window.addEventListener('scroll',()=>{
-  const triggerBottom=window.innerHeight/5*4;
-  sections.forEach(section=>{
-    const sectionTop=section.getBoundingClientRect().top;
-    if(sectionTop<triggerBottom) section.classList.add('reveal');
-  });
+// Smooth Scrolling for all Nav Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        navList.classList.remove('active'); // Close mobile menu on click
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
 
-console.log("New Legacy Barbershop - Advanced Site Loaded");
+// Scroll Reveal Animation
+const sections = document.querySelectorAll('section');
+const options = { threshold: 0.2 };
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('reveal');
+        }
+    });
+}, options);
+
+sections.forEach(section => {
+    observer.observe(section);
+});
